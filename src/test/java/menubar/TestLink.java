@@ -18,27 +18,24 @@ public class TestLink extends MainPage{
        String actual = currentLink();
 
         assertEquals( expected, actual);
-
-
-
-
     }
+    
     @Test
     public void Servises() throws MalformedURLException {
         String expected= getExpectedLink("//div/a[text() = 'Services']");
         String actual = currentLink();
 
         assertEquals( expected, actual);
-
     }
+    
     @Test
     public void Careers() throws MalformedURLException {
         String expected= getExpectedLink("//div/a[text() = 'Careers']");
         String actual = currentLink();
 
         assertEquals( expected, actual);
-
     }
+    
     @Test
     public void Contact() throws MalformedURLException {
         String expected = getExpectedLink("//div/a[text() = 'Contact']");
