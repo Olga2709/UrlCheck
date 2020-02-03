@@ -14,25 +14,37 @@ public class TestLink extends MainPage{
 
     @Test
     public void Portfolio() throws MalformedURLException {
-        clickonLinkMenu("//div/a[text() = 'Portfolio']");
-        assertEquals(composeLink("/portfolio/"), currentLink());
+       String expected= getExpectedLink("//div/a[text() = 'Portfolio']");
+       String actual = currentLink();
+
+        assertEquals( expected, actual);
+
+
 
 
     }
     @Test
     public void Servises() throws MalformedURLException {
-        clickonLinkMenu("//div/a[text() = 'Services']");
-        assertEquals(composeLink("/services/"), currentLink());
+        String expected= getExpectedLink("//div/a[text() = 'Services']");
+        String actual = currentLink();
+
+        assertEquals( expected, actual);
+
     }
     @Test
     public void Careers() throws MalformedURLException {
-        clickonLinkMenu("//div/a[text() = 'Careers']");
-        assertEquals(composeLink("/vacancies/"), currentLink());
+        String expected= getExpectedLink("//div/a[text() = 'Careers']");
+        String actual = currentLink();
+
+        assertEquals( expected, actual);
+
     }
     @Test
     public void Contact() throws MalformedURLException {
-        clickonLinkMenu("//div/a[text() = 'Contact']");
-        assertEquals(composeLink("/contacts/"), currentLink());
+        String expected = getExpectedLink("//div/a[text() = 'Contact']");
+        String actual = currentLink();
+
+        assertEquals( expected, actual);
     }
 
 
