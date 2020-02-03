@@ -15,12 +15,8 @@ public class TestLink extends MainPage{
     @Test
     public void Portfolio() throws MalformedURLException {
         clickonLinkMenu("//div/a[text() = 'Portfolio']");
-        try {
-            assertEquals(composeLink("/portfolio/"), currentLink());
-            System.out.println("Navigated to correct webpage");
-        } catch (Throwable pageNavigationError) {
-            System.out.println("Didn't navigate to correct webpage");
-        }
+        assertEquals(composeLink("/portfolio/"), currentLink());
+
 
     }
     @Test
@@ -38,9 +34,6 @@ public class TestLink extends MainPage{
         clickonLinkMenu("//div/a[text() = 'Contact']");
         assertEquals(composeLink("/contacts/"), currentLink());
     }
-
-
-
 
 
     @AfterEach
